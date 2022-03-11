@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-  likedPostsId.plus(id);
+  likedPostsId.push(id);
   showPosts(posts);
 };
 
@@ -30,7 +30,7 @@ const reportPost = (id) => {
 
 const displayContent = (text) => {
   return text.length < 30
-    ? "Lorem, ipsum dolor sit amet consectetur"
+    ? " Lorem, ipsum dolor sit amet co<span class='fw-bold'>... read more</span>"
     : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
